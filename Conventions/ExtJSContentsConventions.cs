@@ -22,7 +22,9 @@ namespace Nancy.ExtJS.Conventions
 #if DEBUG
                 StaticContentConventionBuilder.AddDirectory("app", Path.Combine(settings.ApplicationPath, "app"), "js"),
                 StaticContentConventionBuilder.AddDirectory("build", Path.Combine(settings.ApplicationPath, "build")),
-                StaticContentConventionBuilder.AddDirectory("ext", Path.Combine(settings.ApplicationPath, "ext"), "js")
+                StaticContentConventionBuilder.AddDirectory("ext", Path.Combine(settings.ApplicationPath, "ext"), "js"),
+                StaticContentConventionBuilder.AddDirectory("overrides", Path.Combine(settings.ApplicationPath, "overrides"), "js"),
+                StaticContentConventionBuilder.AddDirectory("packages", Path.Combine(settings.ApplicationPath, "packages")),
 #else
                 StaticContentConventionBuilder.AddDirectory("resources", Path.Combine(settings.GetBuildPath(), "resources"))
 #endif
